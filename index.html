@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>GUI Prototyping</title>
+    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="header" id="idHeader">
+      <div class="tab" id="idTab1">
+        <button class="buttonTabs" id="idDialer" accesskey="d">Dialer</button>
+      </div>
+      <div class="tab" id="idTab2">
+        <button class="buttonTabs" id="idContactList" accesskey="f">Contact List</button>
+      </div>
+      <div class="tab" id="idTab3">
+        <button class="buttonTabs" id="idAddContact" accesskey="g">Add Contact</button>
+      </div>
+      <div class="tab" id="idTab4">
+        <button class="buttonTabs" id="idHelpTab" accesskey="h">About</button>
+      </div>
+    </div>
+    <div class="content" id="idContent">
+      <div class="screens" id="idContent_Dialer">
+
+        <h2> Dialer </h2>
+
+        <hr />
+
+        <input id="idDialerNumber" readonly="readonly">
+
+        <button class="phone" id="phoneNumber1" accesskey="1">1</button>
+        <button class="phone" id="phoneNumber2" accesskey="2">2</button>
+        <button class="phone" id="phoneNumber3" accesskey="3">3</button>
+        <button class="phone" id="phoneNumber4" accesskey="4">4</button>
+        <button class="phone" id="phoneNumber5" accesskey="5">5</button>
+        <button class="phone" id="phoneNumber6" accesskey="6">6</button>
+        <button class="phone" id="phoneNumber7" accesskey="7">7</button>
+        <button class="phone" id="phoneNumber8" accesskey="8">8</button>
+        <button class="phone" id="phoneNumber9" accesskey="9">9</button>
+        <button class="phone" id="specialChar" accesskey="s">*</button>
+        <button class="phone" id="phoneNumber0" accesskey="0">0</button>
+        <button class="phone" id="pound" accesskey="p">#</button>
+
+        <button class="bottomDialerButtons" id="idDialerDial">Dial</button>
+        <button class="bottomDialerButtons" id="idDialerClear">Clear</button>
+      </div>
+      <div class="screens" id="idContent_ContactList" style="width:110%">
+        <h2> Contact List </h2>
+
+        <hr />
+
+        <table class="table table-striped" id="idContactTable">
+          <tr>
+            <th> Full Name </th>
+            <th> Email </th>
+            <th> Phone Number </th>
+          </tr>
+        </table>
+
+      </div>
+      <div class="screens" id="idContent_AddContact">
+        <h2> Add Contact </h2>
+
+        <hr />
+        <div style="width:50%">
+
+          <label class="contactLabel" for="idNewName"> <h4>Name</h4> </label>
+          <input class="contactBox" id="idNewName" placeholder="Jane Smith">
+
+          <label class="contactLabel" for="idNewNumber"> <h4>Phone Number</h4> </label>
+          <input class="contactBox" id="idNewNumber" placeholder="123456789">
+
+          <label class="contactLabel" for="idNewEmail"> <h4>Email Address</h4> </label>
+          <input class="contactBox" id="idNewEmail" placeholder="jane.smith@colorado.edu">
+
+          <button class="bottomContactButtons" id="idAddContactButton">Add Contact</button>
+          <button class="bottomContactButtons" id="idClearContactButton">Clear</button>
+
+        </div>
+      </div>
+      <div class="screens" id="idContent_About">
+        <h2> About </h2>
+
+        <table class="table table-striped" id="idShortCutTable">
+          <tr>
+            <th> Button </th>
+            <th> Keyboard Shortcut </th>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+  <script src="phone.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</html>
