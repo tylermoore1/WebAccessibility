@@ -1,11 +1,11 @@
-<html>
+<html lang="en">
   <head>
     <title>GUI Prototyping</title>
     <link rel="stylesheet" href="phone.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   </head>
   <body>
-    <div class="header" id="idHeader">
+    <div class="header" id="idHeader" role="navigation">
       <div class="tab" id="idTab1">
         <button class="buttonTabs" id="idDialer" accesskey="d">Dialer</button>
       </div>
@@ -19,14 +19,14 @@
         <button class="buttonTabs" id="idHelpTab" accesskey="h">About</button>
       </div>
     </div>
-    <div class="content" id="idContent">
+    <div class="content" id="idContent" role="main" aria-live="polite">
       <div class="screens" id="idContent_Dialer">
 
         <h2> Dialer </h2>
 
         <hr />
 
-        <input id="idDialerNumber" readonly="readonly">
+        <input id="idDialerNumber" readonly="readonly" style="text-align:right">
 
         <button class="phone" id="phoneNumber1" accesskey="1">1</button>
         <button class="phone" id="phoneNumber2" accesskey="2">2</button>
@@ -44,16 +44,18 @@
         <button class="bottomDialerButtons" id="idDialerDial">Dial</button>
         <button class="bottomDialerButtons" id="idDialerClear">Clear</button>
       </div>
-      <div class="screens" id="idContent_ContactList" style="width:110%">
+      <div class="screens" id="idContent_ContactList">
         <h2> Contact List </h2>
 
         <hr />
 
-        <table class="table table-striped" id="idContactTable">
+        <!-- Filled in table dynamically through jquery -->
+        <table class="table table-hover table-striped" id="idContactTable">
           <tr>
             <th> Full Name </th>
             <th> Email </th>
             <th> Phone Number </th>
+            <th> Contact Picture </th>
           </tr>
         </table>
 
@@ -81,7 +83,8 @@
       <div class="screens" id="idContent_About">
         <h2> About </h2>
 
-        <table class="table table-striped" id="idShortCutTable">
+        <!-- Filled in table dynamically through jquery -->
+        <table class="table table-hover table-striped" id="idShortCutTable">
           <tr>
             <th> Button </th>
             <th> Keyboard Shortcut </th>
@@ -90,8 +93,8 @@
 
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="phone.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </html>

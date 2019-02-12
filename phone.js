@@ -13,7 +13,9 @@ $(document).ready(function() { // do this when the document is loaded
 		$("#idContactTable").append('<tr> \
 				<td>' + firstNames[index] + ' ' + lastNames[index] + ' </td> \
 				<td>' + firstNames[index] + '.' + lastNames[index] + '@gmail.com </td> \
-				<td> 303-797-4362 </td> \
+				<td style="width:20%"> 303-797-4362 </td> \
+				<td> <img src="generic_profile.png" alt="Profile Picture for ' + firstNames[index] + ' ' + lastNames[index] + '" \
+				 	longdesc="This is the profile picture for the specified user" style="width:50%;height:4%"> </td> \
 			</tr>')
 	});
 
@@ -74,7 +76,7 @@ $(".phone").click(function() {
 			phone_number += "-";
 		}
 		var number = this.innerText;
-		number = number.slice(-1);
+		//number = number.slice(-1);
 		phone_number += number;
 
 		$("#idDialerNumber").val(phone_number);
