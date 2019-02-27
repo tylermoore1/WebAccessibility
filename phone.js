@@ -87,3 +87,9 @@ $(".phone").click(function() {
 $("#idDialerClear").click(function() {
 	$("#idDialerNumber").val("");
 });
+
+$("#idClearContactButton").click(function() {
+	$("#idNewName").val('');
+	$("#idNewNumber").val('');
+	$("#idNewEmail").val('');	
+});
